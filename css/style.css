@@ -1,0 +1,367 @@
+:root {
+    --fuentePrincipal: 'Open Sans', sans-serif;
+    --fuenteSecundaria: 'PT Sans', sans-serif;  
+    --fuenteNavegacion: 'Inconsolata', monospace;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --gris: #E1E1E1;
+    --sectionPrincipal: #1f223c;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    font-family: var(--fuentePrincipal);
+    padding: 0;
+    margin: 0;
+}
+
+*, *:before, *:after { /*El primer asterisco selecciona todos los elementos, es un selector universal. */
+    box-sizing: inherit; /*Este box-sizing está heredando desde el selector html, va a aplicar box-sizing: border-box a todos los elementos*/
+  }
+
+
+/* Globales */
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+}
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+} 
+
+h4 {
+    font-size: 2.7rem;
+}
+
+img {
+    max-width: 100%; /*Para que sean imagenes responsive*/
+}
+
+
+/**Utilidades**/
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+
+
+ /* Navegacion */
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--fuenteNavegacion);
+    color: var(--blanco);
+    font-size: 4.5rem;
+    
+}
+
+.logo__nombre {
+    font-weight: normal;
+}
+
+.logo__bold {
+    font-weight: bold;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background: transparent; /*Pongo transparent para luego aplicar el bgcolor con js*/
+    position: fixed;
+    padding: 2rem;
+    transition: .5s; 
+    backdrop-filter: blur(10px);
+}
+.header.ch-bgcolor{
+    background-color: var(--negro);
+}
+.navegacion {
+    display: flex;
+    gap: 3rem;
+    font-family: var(--fuenteNavegacion);
+    
+}
+
+.navegacion__enlace {
+    font-size: 1.8rem;
+    color: var(--blanco);
+    transition: .5s;
+    text-align: center;
+}
+
+.navegacion__enlace:hover {
+    border-bottom: 1px solid var(--blanco);
+}
+
+
+/* Informacion Personal */
+.principal {
+    width: 100%;
+    height: 100vh;
+    background: #232526;  
+    background: -webkit-linear-gradient(to right, #414345, #232526);  
+    background: linear-gradient(to right, #414345, #232526);
+}
+
+.centrar {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   gap: 1rem;
+}
+.centrar h2{
+    margin: 0;
+    color: var(--blanco);
+}
+
+.centrar p {
+    font-size: 1.6rem;
+    color: var(--blanco);
+    margin: 0;
+}
+
+.centrar img {
+    width: 300px;
+    height: 300px;
+    border-radius: 70%;
+    object-fit: cover;
+}
+
+/* Sobre mi */
+#sobre-mi{
+    background-color: #dfdede;
+}
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+.parrafo {
+    width: 50%;
+    text-align: center;
+    font-size: 1.7rem;
+    
+}
+.saludo {
+    margin-top: 1.5rem;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+
+
+/* Projects */
+
+#projects {
+    background-color: #dfdede;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: .3rem;
+    box-shadow: 2.5px 2.5px 2.5px 2.5px rgb(75, 75, 75);
+}
+
+
+
+/* Form y section Contacto */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.cv p {
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+.form-section { 
+    background-color: #dfdede;
+    
+}
+
+#formulario {
+    width: min( 60rem, 100% ); /** min va a utilizar el valor más pequeño **/
+    margin: 0 auto; /** utilizalo siempre que tengas un elemento como un formulario cuyo padre no sea un display flex.**/
+    border-radius: 1rem;
+}
+
+#formulario fieldset {
+    border: none;
+    padding: 0;
+}
+#formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--negro);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.campo label { 
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo textarea {
+    height: 20rem;
+    text-decoration: none;
+    resize: none;
+    font-size: 1.5rem;
+    font-family: var(--fuentePrincipal);
+}
+
+.input-text {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    border: 1px solid var(--negro);
+}
+
+.boton {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 1rem;
+    position: sticky;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-radius: 2rem;
+    width: 100%;
+    text-align: center;
+    border: 2px solid var(--negro);
+    transition-duration: .5s;
+}
+.boton:hover {
+    cursor: pointer;
+    transition: .5s;
+    background: none;
+    color: var(--negro);
+}
+
+/* Footer */
+
+#footer {
+    background-color: var(--negro);
+    font-family: var(--fuenteNavegacion);
+    color: var(--blanco);
+}
+
+.footer-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.redes-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.linkedin,
+.instagram,
+.git {
+    transition: .3s;
+}
+.linkedin:hover,
+.instagram:hover,
+.git:hover {
+ opacity: .4;
+}
+
+.footer-contenido h2 {
+    font-size: 2.8rem;
+    font-weight: normal;
+}
+
+.footer-contenido p {
+    font-size: 1.7rem;
+}
+
+.footer-bottom {
+    background-color: var(--negro);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .6;
+    font-weight: 200;
+}

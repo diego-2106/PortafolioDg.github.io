@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Portfolio Diego</title>
+    <meta name="description" content="Mi portafolio">
+
+    <!-- CSS -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="./css/style.css">
+
+     <!-- Normalize
+     <link rel="preload" href="css/normalize.css" as="style">
+     <link rel="stylesheet" href="css/normalize.css"> -->
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Vazirmatn:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="#">
+                <h1 class="logo logo__nombre no-margin centrar-texto"> <strong>{</strong>Portfolio<span class="logo__bold">Diego<strong>}</strong></span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="#sobre-mi" class="navegacion__enlace">Sobre Mí</a>
+                    <a href="#projects" class="navegacion__enlace">Proyectos</a>
+                    <a href="#formulario" class="navegacion__enlace">Contacto</a>
+                    <a href="#footer" class="navegacion__enlace">Mis redes</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="principal">
+       <div class="contenedor centrar">
+        <picture>
+            <source srcset="img/foto.webp" type="image/webp">
+        <img src="/img/foto.png" alt="Diego Gonzalez">
+    </picture>
+
+        <h2>Diego González</h2>
+        <p>Estudiante de Licenciatura en TI y Desarrollo Web.</p>
+
+       </div>
+    </section>
+
+    <section id="sobre-mi">
+
+        <div class="contenedor">
+
+            <div class="texto">
+            <span class="saludo">Hola, soy Diego &#128075;</span>
+
+            <div class="parrafo">
+                <p>Estudiante de TI y apasionado del mundo de la informática, 
+                disfruto trabajando en equipo y ayudando a las personas. También soy estudiante de Desarrollo Web donde he adquirido conocimientos en HTML y CSS.</p>
+                <p> Me gusta ponerme desafíos y encontrar una solución creativa y lo mas intuitiva posible.
+                Estoy continuamente buscando mejorar mis habilidades y crecer en este mundo que tanto me gusta.</p>
+                <p> Durante mi tiempo estudiando Desarrollo Web he aprendido muchas cosas y he mejorado mucho mis habilidades, por lo que
+                    en mi portfolio podrás encontrar páginas web estáticas que realicé mediante cursos como también proyectos personales.</p>
+            </div>                                                                                                                                                    
+            </div>
+           </div> <!-- Termina contenedor -->
+
+    </section>
+
+
+    <section id="projects">
+
+        <div class="contenedor">
+            
+            <div class="center"> 
+                <h2>Mis Proyectos</h2>
+        <div class="grid">
+            
+            <div class="imagen">
+                <a href="https://blogcafediego.netlify.app" target="_blank"><img loading="lazy" src="img/blogc.png" alt="blogcafe"></a>
+            </div>
+
+            <div class="imagen">
+               <a href="https://freelancediego.netlify.app" target="_blank"><img loading="lazy" src="img/free.png" alt="freelance"></a>
+            </div>
+
+            <div class="imagen">
+                <a href="https://diego-login.netlify.app/" target="_blank"><img loading="lazy" src="img/login.png" alt="login"></a>
+            </div>  
+
+            <div class="imagen">
+                <a href="https://frontstore-diego.netlify.app/" target="_blank"><img loading="lazy" src="img/store.png" alt="frontendstore"></a>
+             </div>
+        
+        </div> <!--Termina grid-->
+        </div> <!--Termina center-->
+
+
+     </div> <!-- Termina contenedor -->
+    </section>
+
+
+    <section class="form-section">
+
+        <div id="contacto">
+            <h2>Contacto</h2>
+        </div>
+
+        <form id="formulario">
+            <div class="contenedor"></div>
+            <fieldset>
+                <legend>Contáctame llenando el siguiente formulario.</legend>
+                <div class="contenedor-campos">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input class="input-text" type="text" placeholder="Nombre Completo" id="nombre" name="name">
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo</label>
+                    <input class="input-text" type="email" placeholder="correo@ejemplo.com" id="correo" name="email">
+                </div>
+    
+                <div class="campo">
+                    <label for="asunto">Asunto</label>
+                    <input class="input-text" type="text" placeholder="Asunto" id="asunto" name="subject">
+                </div>
+    
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="input-text" id="mensaje" name="coments"></textarea>
+                </div>   
+                     <!-- termina contenedor-campos -->
+                <div class="enviar">
+                    <input type="button" class="boton" value="Enviar" onclick="alertValidar()">
+                </div>
+
+            </fieldset>
+            </div>  
+            </form>
+        
+    </section>
+
+
+
+    <footer id="footer">
+        <div class="footer-contenido">
+        <h2 class="logo__nombre"><strong>{</strong>Portfolio<span class="logo__bold">Diego<strong>}</strong></span></h2>
+        <p>Sígueme en mis redes sociales.</p>
+    </div>
+
+    <div class="redes-icons">
+        <div class="linkedin">
+            <a aria-label="Linkedin" href="https://www.linkedin.com/in/diego-gonzalez-281682207/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+            <path d="M8 11l0 5" />
+            <path d="M8 8l0 .01" />
+            <path d="M12 16l0 -5" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+        </div>
+        <div class="instagram">
+            <a aria-label="Instagram" href="https://www.instagram.com/diego.gonz4lez/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M16.5 7.5l0 .01" />
+          </svg>
+        </a>
+        </div>
+        <div class="git">
+            <a aria-label="GitHub" href="https://github.com/diego-2106" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+          </svg>
+        </a>
+        </div>
+    </div>
+
+
+    <div class="footer-bottom">
+        <p><span>Diego González</span> &copy; 2023. Todos los derechos reservados</p>
+    </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/modernizr.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
